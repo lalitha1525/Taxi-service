@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CityRide - Taxi Service</title>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/features.css" />
+  <link rel="stylesheet" href="css/book.css" />
+  <link rel="stylesheet" href="css/drivers.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/confirmation.css" />
+  <link rel="stylesheet" href="css/rating.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+  <div class="container">
+    <div class="logo"><a href="index.html">QuickRide</a></div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html">Book a Ride</a></li>
+        <li><a href="drivers.html">Drivers</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Support</a></li>
+      </ul>
+    </nav>
+    <button id="mobileMenuBtn" class="mobile-menu-btn">☰</button>
+  </div>
+  <div class="auth-buttons">
+  <a href="#" class="login-btn">Login</a>
+  <a href="#" class="signup-btn">Signup</a>
+</div>
+
+
+</header>
+
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Your Ride, On Demand</h1>
+          <p>Get where you're going with CityRide's reliable taxi service</p>
+          <a href="book.html" class="cta-button">Book Now</a>
+        </div>
+        <div class="hero-image">
+          <img src="TAXI-1.png" alt="Taxi" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+      <div class="container">
+        <h2>Why Choose CityRide?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fas fa-clock"></i>
+            <h3>Quick Pickup</h3>
+            <p>Average wait time of just 5 minutes in most areas</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-dollar-sign"></i>
+            <h3>Affordable Rates</h3>
+            <p>Competitive pricing with no surge charges</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-star"></i>
+            <h3>Rated Drivers</h3>
+            <p>Professional drivers with excellent ratings</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rated Drivers Button -->
+    <button id="showRatingsBtn" class="show-ratings-btn">
+      <img src="images/star-icon.png" alt="Star Icon" width="24" style="vertical-align:middle;" />
+      Rated Drivers ⭐
+    </button>
+
+    <!-- Hidden Rating Section -->
+    <section id="ratingSection" class="rating-section hidden">
+      <h2>Rate Our Drivers</h2>
+
+      <div class="driver-card">
+        <h3>Anjali Sharma</h3>
+        <p>Rate this driver:</p>
+        <div class="stars" data-driver="Anjali Sharma">★★★★★</div>
+      </div>
+
+      <div class="driver-card">
+        <h3>Rahul Verma</h3>
+        <p>Rate this driver:</p>
+        <div class="stars" data-driver="Rahul Verma">★★★★★</div>
+      </div>
+
+      <div class="driver-card">
+        <h3>Pooja Reddy</h3>
+        <p>Rate this driver:</p>
+        <div class="stars" data-driver="Pooja Reddy">★★★★★</div>
+      </div>
+
+      <div id="thanksMessage" class="thanks-msg hidden">Thank you for your feedback!</div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>CityRide</h3>
+          <p>Reliable taxi service for all your transportation needs.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="book.html">Book Ride</a></li>
+            <li><a href="drivers.html">Drivers</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-envelope"></i> info@cityride.com</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 CityRide. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+ 
+  <!-- AUTH MODAL -->
+  <!-- AUTH MODAL -->
+<div class="auth-modal" id="authModal">
+  <div class="auth-overlay"></div>
+  <div class="form-popup">
+    <button id="closeModal" class="close-btn">&times;</button>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="auth-form">
+      <h2>Login</h2>
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit" class="btn-primary">Login</button>
+      <p>Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+    </form>
+
+    <!-- Signup Form -->
+    <form id="signupForm" class="auth-form hidden">
+      <h2>Sign Up</h2>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit" class="btn-primary">Sign Up</button>
+      <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+    </form>
+  </div>
+</div>
+
+ <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

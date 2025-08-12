@@ -1,0 +1,55 @@
+/* rating.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.rating-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.rating-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.driver-card {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.driver-card h3 {
+  margin: 0 0 8px;
+}
+
+.stars {
+  font-size: 28px;
+  color: #ccc;
+  cursor: pointer;
+  user-select: none;
+}
+
+.stars.selected span,
+.stars span:hover,
+.stars span:hover ~ span {
+  color: #f5b301;
+}
+
+.thanks-msg {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}

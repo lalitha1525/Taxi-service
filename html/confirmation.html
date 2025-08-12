@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Confirmed | CityRide</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/confirmation.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+  <div class="container">
+    <div class="logo"><a href="index.html">QuickRide</a></div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="booking.html">Book a Ride</a></li>
+        <li><a href="drivers.html">Drivers</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Support</a></li>
+      </ul>
+    </nav>
+    <button id="mobileMenuBtn" class="mobile-menu-btn">☰</button>
+  </div>
+</header>
+
+
+  <!-- Confirmation Section -->
+  <section class="confirmation-section">
+    <div id="initialConfirmation">
+      <h1 class="confirmation-title">Confirm Your Ride Details</h1>
+      <p class="subtitle">Please review your ride details below</p>
+      <div class="booking-id">Booking ID: <span id="bookingId">TG-XXXXXXX</span></div>
+
+      <div class="details-container">
+        <div class="card">
+          <h2>Trip Details</h2>
+          <p><span class="icon">📍</span><strong>Pickup:</strong> <span id="pickup"></span></p>
+          <p><span class="icon">📍</span><strong>Destination:</strong> <span id="destination"></span></p>
+          <p><span class="icon">📅</span><strong>Date & Time:</strong> <span id="datetime"></span></p>
+          <p><span class="icon">🚘</span><strong>Vehicle Type:</strong> <span id="vehicle"></span></p>
+          <p><span class="icon">👤</span><strong>Passengers:</strong> <span id="passengers"></span></p>
+          <p><span class="icon">💵</span><strong>Total Fare:</strong> <span id="fare"></span></p>
+        </div>
+      </div>
+
+      <div class="btn-container" id="confirmSection">
+        <button class="btn cancel" onclick="window.location.href='book.html'">Cancel Booking</button>
+        <button class="btn book" onclick="showThankYou()">Confirm & Book</button>
+      </div>
+    </div>
+
+    <div id="thankYouSection" style="display:none; text-align:center">
+      <div class="animated-thankyou">Thank You! Your ride is booked.</div>
+
+      <div class="details-container">
+        <div class="card">
+          <h2>Your Driver</h2>
+          <p><strong>John Smith</strong><br><span style="color: #171615;">⭐ 4.8 rating</span></p>
+          <p><strong>Vehicle:</strong> 2022 Toyota Camry</p>
+          <p><strong>Color:</strong> Silver</p>
+          <p><strong>License Plate:</strong> ABC-123</p>
+          <p><strong>Estimated Arrival:</strong> <span class="arrival-time">5 minutes</span></p>
+          <button class="call-btn">📞 Call Driver</button>
+        </div>
+      </div>
+
+      <!-- Back to Home Button -->
+      <a href="index.html" class="back-home">⬅ Back to Home</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 CityRide. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function getParam(key) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(key) || "-";
+    }
+
+    function calculateFare(vehicle, passengers) {
+      const baseRates = { Economy: 10, Comfort: 15, Premium: 25, XL: 20 };
+      const extra = 2;
+      const total = (baseRates[vehicle] || 0) + ((parseInt(passengers) - 1) * extra);
+      return `$${total.toFixed(2)}`;
+    }
+
+    // Fill in data
+    document.getElementById("pickup").textContent = getParam("pickup");
+    document.getElementById("destination").textContent = getParam("destination");
+    document.getElementById("datetime").textContent = `${getParam("date")} at ${getParam("time")}`;
+    document.getElementById("vehicle").textContent = getParam("vehicle");
+    document.getElementById("passengers").textContent = getParam("passengers") + " passenger(s)";
+    document.getElementById("fare").textContent = calculateFare(getParam("vehicle"), getParam("passengers"));
+    document.getElementById("bookingId").textContent = "TG-" + Math.random().toString(36).substr(2, 8).toUpperCase();
+
+    function showThankYou() {
+      document.getElementById("thankYouSection").style.display = "block";
+      document.getElementById("initialConfirmation").style.display = "none";
+    }
+  </script>
+</body>
+</html>

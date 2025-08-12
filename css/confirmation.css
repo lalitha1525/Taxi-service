@@ -1,0 +1,163 @@
+.confirmation-section {
+  min-height: calc(100vh - 160px);
+  padding: 3rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+    background: #7a9e97;
+
+}
+
+.confirmation-title {
+  text-align: center;
+  color: #151313;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #191818;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.details-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+
+.card {
+  background: #d5e0eb;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  width: 100%; /* Or set a fixed width like 600px */
+  max-width: 600px;
+  text-align: center;
+  font-size: medium;
+}
+
+.card h2 {
+  font-size: 2rem;  /* increase from 1.6rem to 2rem */
+  margin-bottom: 1.2rem;
+  color: #0c0b0b;
+}
+
+.card p {
+  font-size: 1.2rem;  /* increase from 1rem to 1.2rem */
+  margin: 0.4rem 0;
+  color: #131111;
+}
+
+
+.card .icon {
+  margin-right: 0.5rem;
+}
+
+.booking-id {
+  font-weight: bold;
+  color: #18191a;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.9rem;
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.cancel {
+  background-color: #ccc;
+}
+
+.btn.cancel:hover {
+  background-color: #999;
+}
+
+.btn.book {
+  background-color: #c62158;
+  color: #fff;
+}
+
+.btn.book:hover {
+  background-color: #a91b4a;
+}
+
+.animated-thankyou {
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(32, 39, 32);
+  text-align: center;
+  margin: 0 auto;
+  animation: typing 3s steps(30) 1 normal both;
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+  max-width: 100%;
+  display: inline-block;
+  /* Remove the typing cursor line below */
+  /* border-right: 3px solid rgba(0, 0, 0, 0.75); */
+}
+
+
+#thankYouSection {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.call-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.call-btn:hover {
+  background-color: #0056b3;
+}
+
+.back-home {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-top: 1rem;
+}
+
+.back-home:hover {
+  background-color: #0056b3;
+}
+.driver-card {
+  margin-bottom: 0; /* Remove extra space */
+}

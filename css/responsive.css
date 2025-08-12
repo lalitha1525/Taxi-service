@@ -1,0 +1,54 @@
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header .container {
+        flex-wrap: wrap;
+    }
+
+    .nav {
+        display: none;
+        width: 100%;
+        order: 1;
+        margin-top: 1rem;
+    }
+
+    .nav.show {
+        display: block;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #444;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-bottom: 2rem;
+    }
+
+    .ride-types {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .booking h1, .drivers h1 {
+        font-size: 2rem;
+    }
+}

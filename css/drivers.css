@@ -1,0 +1,124 @@
+/* Global Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Drivers Section */
+.drivers-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #fff6e5, #235b9b);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Section Heading */
+.drivers-section h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Grid Layout for Driver Cards */
+.drivers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Driver Card */
+.driver-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.driver-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Avatar (Optional) */
+.driver-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #a3491c;
+  margin-bottom: 1.2rem;
+}
+
+/* Icon Avatar (When Image is Not Used) */
+.driver-icon {
+  font-size: 3.5rem;
+  color: #74653d;
+  margin-bottom: 1.2rem;
+}
+
+/* Driver Name */
+.driver-card h3 {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+/* Rating & Car Info Rows */
+.rating,
+.car-info {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.rating i,
+.car-info i {
+  color: #12100d;
+}
+
+/* Book Button */
+.profile-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #17a15c;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+.profile-btn:hover {
+  background-color: #e0a100;
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .drivers-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .driver-card {
+    padding: 1.5rem;
+  }
+
+  .driver-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .driver-icon {
+    font-size: 2.8rem;
+  }
+}
